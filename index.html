@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav Sharma | Multidisciplinary Visual Designer</title>
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="paper-grain">
+
+    <!-- Main Architectural Container -->
+    <div class="site-wrapper">
+
+        <!-- Global Header -->
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="#hero" class="brand-mark" aria-label="Vaibhav Sharma, Home">
+                    <span class="brand-name">Vaibhav Sharma</span>
+                    <span class="brand-role">/ Visual Designer</span>
+                </a>
+
+                <nav class="nav-menu" aria-label="Main Navigation">
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#disciplines" class="nav-link">Disciplines</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="https://discord.com/invite/zJmwTAxzZx" target="_blank" rel="noopener noreferrer" class="nav-link" style="color: var(--terracotta);">Discord ↗</a>
+                </nav>
+
+                <button type="button" onclick="copyEmailAddress()" class="email-copy-pill" aria-label="Copy email address">
+                    <span id="nav-email-text">vaibhavsharma9053@gmail.com</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- ==========================================
+                 00 / HERO SECTION
+                 ========================================== -->
+            <section id="hero" class="border-b-rule crosshair-corner crosshair-br">
+                <div class="hero-grid">
+                    <!-- Left Column: Factual Statement -->
+                    <div class="hero-statement-pane">
+                        <div>
+                            <div class="discipline-tagline">
+                                <span class="discipline-dot" aria-hidden="true"></span>
+                                <span>UI UX Design · Brand Identity · YouTube Content · Visual Design</span>
+                            </div>
+                            <h1 class="hero-headline">
+                                Multidisciplinary visual designer crafting digital products, brand identities, and visual content.
+                            </h1>
+                            <p class="hero-body">
+                                I am Vaibhav Sharma. I work across digital interface design, brand identity systems, and visual media packaging. Operating from India with a dedicated focus on visual clarity, deliberate typography, and structured design execution.
+                            </p>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="#work" class="btn-primary">
+                                <span>Inspect Work</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#contact" class="btn-secondary">
+                                <span>Get in Touch</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Authentic Editorial Portrait -->
+                    <div class="hero-portrait-pane crosshair-corner crosshair-bl">
+                        <div class="portrait-frame">
+                            <img src="assets/vaibhav-outdoor-portrait.jpg" 
+                                 alt="Vaibhav Sharma, Multidisciplinary Visual Designer" 
+                                 class="portrait-img"
+                                 width="500" 
+                                 height="625"
+                                 loading="eager">
+                        </div>
+                        <div class="portrait-caption">
+                            <span>Vaibhav Sharma · Specimen</span>
+                            <span>India · UTC+5:30</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 01 / SELECTED WORK SHOWCASE
+                 ========================================== -->
+            <section id="work" class="border-b-rule">
+                <!-- Section Header with Discipline Filter Tabs -->
+                <div class="section-header border-b-rule">
+                    <div>
+                        <div class="section-label">01 / Selected Work</div>
+                        <h2 class="section-title">Visual Work Archive</h2>
+                    </div>
+
+                    <div class="filter-tabs" role="tablist" aria-label="Discipline Filters">
+                        <button type="button" onclick="filterDiscipline('all', this)" class="filter-tab active" role="tab" aria-selected="true">
+                            All Work
+                        </button>
+                        <button type="button" onclick="filterDiscipline('uiux', this)" class="filter-tab" role="tab" aria-selected="false">
+                            UI UX Product
+                        </button>
+                        <button type="button" onclick="filterDiscipline('branding', this)" class="filter-tab" role="tab" aria-selected="false">
+                            Brand Identity
+                        </button>
+                        <button type="button" onclick="filterDiscipline('thumbnails', this)" class="filter-tab" role="tab" aria-selected="false">
+                            Thumbnails
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Reusable Showcase Grid -->
+                <div class="showcase-grid">
+
+                    <!-- Showcase 1: UI UX Digital Product Layout -->
+                    <article class="showcase-card border-b-rule border-r-rule crosshair-corner crosshair-br" data-discipline="uiux">
+                        <div>
+                            <div class="card-meta-top">
+                                <span class="discipline-badge">UI UX Product Design</span>
+                                <span class="status-badge">
+                                    <span class="status-indicator-dot" aria-hidden="true"></span>
+                                    <span>Archive Updating</span>
+                                </span>
+                            </div>
+
+                            <div class="media-viewport-container uiux-frame">
+                                <div class="browser-header-bar">
+                                    <div class="browser-dots" aria-hidden="true">
+                                        <span class="browser-dot"></span>
+                                        <span class="browser-dot"></span>
+                                        <span class="browser-dot"></span>
+                                    </div>
+                                    <span class="browser-tab-label">PROTOTYPE VIEWPORT</span>
+                                    <span style="width: 25px;"></span>
+                                </div>
+                                <div class="browser-content-area">
+                                    <div style="font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+                                        Digital Product Interface
+                                    </div>
+                                    <p style="font-size: 0.85rem; color: var(--stone); max-width: 320px; line-height: 1.55;">
+                                        Selected interface projects currently being cataloged. Full interactive prototypes and design system flows available upon direct inquiry.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="card-title">Digital Product & Application Interfaces</h3>
+                            <p class="card-description">
+                                Structured responsive screen workflows, information architecture, and component systems engineered for usability and visual clarity.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <span>Format · Web & Mobile</span>
+                            <a href="#contact" class="card-action-link">
+                                <span>Request Case Studies</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Showcase 2: Brand Identity & Monogram Layout -->
+                    <article class="showcase-card border-b-rule crosshair-corner crosshair-bl" data-discipline="branding">
+                        <div>
+                            <div class="card-meta-top">
+                                <span class="discipline-badge">Brand Identity System</span>
+                                <span class="status-badge">
+                                    <span class="status-indicator-dot" aria-hidden="true"></span>
+                                    <span>Archive Updating</span>
+                                </span>
+                            </div>
+
+                            <div class="media-viewport-container identity-frame">
+                                <div class="identity-guide-circle" aria-hidden="true"></div>
+                                <div style="position: relative; z-index: 2;">
+                                    <div style="font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+                                        Brand Identity System
+                                    </div>
+                                    <p style="font-size: 0.85rem; color: var(--stone); max-width: 320px; line-height: 1.55;">
+                                        Brand identity archives currently being cataloged. Vector marks, typography standards, and brand collateral available upon direct inquiry.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="card-title">Geometric Marks & Identity Systems</h3>
+                            <p class="card-description">
+                                Distilled vector logomarks, typography rules, color palettes, and identity systems designed to remain distinct across physical and digital formats.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <span>Format · Vector & Print</span>
+                            <a href="#contact" class="card-action-link">
+                                <span>Request Brand Deck</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Showcase 3: YouTube Thumbnails & Visual Packaging -->
+                    <article class="showcase-card border-b-rule border-r-rule crosshair-corner crosshair-tr" data-discipline="thumbnails">
+                        <div>
+                            <div class="card-meta-top">
+                                <span class="discipline-badge">YouTube Packaging</span>
+                                <span class="status-badge">
+                                    <span class="status-indicator-dot" aria-hidden="true"></span>
+                                    <span>Archive Updating</span>
+                                </span>
+                            </div>
+
+                            <div class="media-viewport-container thumbnail-frame">
+                                <div class="thumbnail-safe-guides" aria-hidden="true"></div>
+                                <span class="thumbnail-badge-timecode" aria-hidden="true">16:9 UHD</span>
+                                <div style="position: relative; z-index: 2;">
+                                    <div style="font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+                                        YouTube Packaging Art
+                                    </div>
+                                    <p style="font-size: 0.85rem; color: var(--stone); max-width: 340px; line-height: 1.55;">
+                                        Selected video packaging artworks currently being cataloged. High resolution 16:9 thumbnail compositions available upon direct inquiry.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="card-title">High Impact Video Packaging</h3>
+                            <p class="card-description">
+                                Subject isolation, lighting separation, and curiosity driven visual hierarchy designed specifically to win browse attention in crowded feeds.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <span>Format · 16:9 Video Canvas</span>
+                            <a href="#contact" class="card-action-link">
+                                <span>Request Thumbnail Portfolio</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Showcase 4: Graphic Design & Visual Explorations -->
+                    <article class="showcase-card border-b-rule crosshair-corner crosshair-tl" data-discipline="branding">
+                        <div>
+                            <div class="card-meta-top">
+                                <span class="discipline-badge">Graphic Design</span>
+                                <span class="status-badge">
+                                    <span class="status-indicator-dot" aria-hidden="true"></span>
+                                    <span>Archive Updating</span>
+                                </span>
+                            </div>
+
+                            <div class="media-viewport-container identity-frame">
+                                <div class="identity-guide-circle" style="width: 110px; height: 110px;" aria-hidden="true"></div>
+                                <div style="position: relative; z-index: 2;">
+                                    <div style="font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+                                        Visual Design Explorations
+                                    </div>
+                                    <p style="font-size: 0.85rem; color: var(--stone); max-width: 320px; line-height: 1.55;">
+                                        Visual design collection currently being cataloged. Posters, digital assets, and layout experiments available upon direct inquiry.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="card-title">Editorial & Graphic Compositions</h3>
+                            <p class="card-description">
+                                Experimental typography, spatial balance, and visual assets combining typographic precision with striking visual weight.
+                            </p>
+                        </div>
+
+                        <div class="card-footer">
+                            <span>Format · Digital & Editorial</span>
+                            <a href="#contact" class="card-action-link">
+                                <span>Request Graphic Works</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 02 / DISCIPLINES & CAPABILITIES
+                 ========================================== -->
+            <section id="disciplines" class="border-b-rule">
+                <div class="section-header border-b-rule">
+                    <div>
+                        <div class="section-label">02 / Capabilities</div>
+                        <h2 class="section-title">Discipline Scope</h2>
+                    </div>
+                </div>
+
+                <div class="disciplines-grid">
+                    <!-- Discipline 1: UI UX -->
+                    <div class="discipline-column border-r-rule border-b-rule crosshair-corner crosshair-tr">
+                        <div class="discipline-num">01 / DISCIPLINE</div>
+                        <h3 class="discipline-title">UI UX Product Design</h3>
+                        <p class="discipline-desc">
+                            Designing clean, functional digital interfaces that balance user needs with structural visual hierarchy.
+                        </p>
+                        <ul class="discipline-list">
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Responsive web and mobile screen design</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>User journey and workflow architecture</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Interactive screen prototypes</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Structured UI component libraries</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Discipline 2: Brand Identity -->
+                    <div class="discipline-column border-r-rule border-b-rule crosshair-corner crosshair-tr">
+                        <div class="discipline-num">02 / DISCIPLINE</div>
+                        <h3 class="discipline-title">Logo & Brand Identity</h3>
+                        <p class="discipline-desc">
+                            Crafting memorable geometric logomarks, typography scales, and cohesive visual standards for modern brands.
+                        </p>
+                        <ul class="discipline-list">
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Vector logomark and symbol design</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Typographic hierarchy and pairing</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Color palette architecture</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Brand guidelines and collateral design</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Discipline 3: YouTube Thumbnails -->
+                    <div class="discipline-column border-b-rule">
+                        <div class="discipline-num">03 / DISCIPLINE</div>
+                        <h3 class="discipline-title">YouTube Thumbnails</h3>
+                        <p class="discipline-desc">
+                            Engineering high contrast visual packaging designed to capture immediate attention and drive organic interest.
+                        </p>
+                        <ul class="discipline-list">
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>High resolution 16:9 artwork composition</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Focal separation and lighting contrast</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Title and curiosity hook synergy</span>
+                            </li>
+                            <li class="discipline-item">
+                                <span class="discipline-bullet">▪</span>
+                                <span>Visual packaging systems</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 03 / ABOUT THE PRACTICE
+                 ========================================== -->
+            <section id="about" class="border-b-rule">
+                <div class="about-grid">
+                    <div class="about-content-pane border-r-rule">
+                        <div class="section-label">03 / About</div>
+                        <h2 class="about-title">Creative Approach & Philosophy</h2>
+                        <p class="about-text">
+                            I approach visual design as an interconnected discipline. Rather than separating digital products from brand identities or content packaging, I treat each medium as an expression of visual clarity, contrast, and purpose.
+                        </p>
+                        <p class="about-text">
+                            A strong interface requires the typographic discipline of branding; an effective brand identity requires the functional clarity of UI UX; and successful thumbnail packaging requires an understanding of immediate human perception.
+                        </p>
+                        <p class="about-text">
+                            Working independently allows for focused collaboration and direct communication on every project, maintaining high standards across every deliverable.
+                        </p>
+                    </div>
+
+                    <div class="hero-portrait-pane crosshair-corner crosshair-tl" style="background-color: var(--canvas);">
+                        <div class="portrait-frame" style="aspect-ratio: 1 / 1;">
+                            <img src="assets/vaibhav-portrait-studio.jpg" 
+                                 alt="Vaibhav Sharma, Studio Profile" 
+                                 class="portrait-img"
+                                 width="500" 
+                                 height="500"
+                                 loading="lazy">
+                        </div>
+                        <div class="portrait-caption">
+                            <span>Vaibhav Sharma · Profile</span>
+                            <span>Studio Specimen</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 04 / CONTACT SECTION
+                 ========================================== -->
+            <section id="contact" class="border-b-rule">
+                <div class="contact-grid">
+                    <div class="contact-pane border-r-rule">
+                        <div class="section-label">04 / Contact</div>
+                        <h2 class="section-title" style="margin-bottom: 1.5rem;">Start a Conversation</h2>
+                        <p style="color: var(--stone); margin-bottom: 1.5rem; line-height: 1.6;">
+                            Direct project inquiries, collaboration discussions, and requests for specific portfolio decks or visual archives are welcomed via email.
+                        </p>
+                        
+                        <a href="mailto:vaibhavsharma9053@gmail.com" class="contact-email-link">
+                            vaibhavsharma9053@gmail.com
+                        </a>
+
+                        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                            <button type="button" onclick="copyEmailAddress()" class="btn-primary" aria-label="Copy email to clipboard">
+                                <span>Copy Email Address</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <a href="mailto:vaibhavsharma9053@gmail.com" class="btn-secondary">
+                                <span>Send Direct Email</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                            <a href="https://discord.com/invite/zJmwTAxzZx" target="_blank" rel="noopener noreferrer" class="btn-secondary" aria-label="Join Discord Community">
+                                <span>Join Discord</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-pane" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--terracotta); text-transform: uppercase; margin-bottom: 0.75rem;">
+                                Communication & Availability
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--stone); margin-bottom: 1.5rem; line-height: 1.65;">
+                                Inquiries are reviewed and answered directly. For comprehensive project inquiries, please include project scope, target timeline, and any relevant references.
+                            </p>
+                            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink);">
+                                Location · India (UTC+5:30)
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 2rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--stone); display: flex; flex-direction: column; gap: 0.35rem;">
+                            <div>Verified Email · vaibhavsharma9053@gmail.com</div>
+                            <div>Discord Channel · <a href="https://discord.com/invite/zJmwTAxzZx" target="_blank" rel="noopener noreferrer" style="color: var(--terracotta); font-weight: 500;">discord.com/invite/zJmwTAxzZx ↗</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Global Footer -->
+        <footer class="site-footer">
+            <div>
+                © 2026 Vaibhav Sharma · Multidisciplinary Visual Designer
+            </div>
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+                <a href="https://discord.com/invite/zJmwTAxzZx" target="_blank" rel="noopener noreferrer" style="color: var(--stone);">Discord Community ↗</a>
+                <a href="#hero" style="color: var(--ink); font-weight: 500;">Back to top ↑</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div id="toast-notice" class="toast-notice" role="status" aria-live="polite">
+        Email address copied to clipboard
+    </div>
+
+    <!-- Modular Vanilla Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
